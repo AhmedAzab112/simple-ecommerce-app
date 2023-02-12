@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 
@@ -12,11 +13,13 @@ import { HeaderComponent } from './components/header/header.component';
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatBadgeModule
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MatBadgeModule
   ]
 })
 export class SharedModule { }
