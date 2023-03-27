@@ -22,6 +22,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDialogComponent } from './components/mat-dialog/mat-dialog.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -39,7 +40,8 @@ const AngularMaterialComponent: any = [
   MatSelectModule,
   MatRadioModule,
   MatDialogModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatPaginatorModule
 ];
 
 @NgModule({

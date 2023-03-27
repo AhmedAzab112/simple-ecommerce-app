@@ -82,6 +82,16 @@ export class AllProductsComponent implements OnInit {
     this.isRequestSubmitted = false;
   }
 
+
+  handlePageEvent(event: any){
+    this.products = [];
+    this.masterProduct.forEach((el,idx) => {
+      if(idx < event.pageSize){
+        this.products.push(el)
+      }
+    })
+  }
+
   openDialog(id: number = 0) {
     if (id == 0)
       return;

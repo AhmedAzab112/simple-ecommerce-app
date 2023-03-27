@@ -33,6 +33,19 @@
     <h3 class="p-5 fw-bold pb-0">There is no data to display</h3>
     <mat-icon class="fs-1 text-warning">sentiment_dissatisfied</mat-icon>
   </div>
+
+  <div class="px-4">
+    <mat-paginator
+      *ngIf="masterProduct"
+      (page)="handlePageEvent($event)"
+      [disabled]="!masterProduct || masterProduct.length == 0"
+      [length]="masterProduct.length"
+      [pageSize]="products.length"
+      [pageSizeOptions]="[4, 8, 16, masterProduct.length]"
+      [showFirstLastButtons]="false"
+      aria-label="Select page">
+    </mat-paginator>
+  </div>
 </div>
 
 
